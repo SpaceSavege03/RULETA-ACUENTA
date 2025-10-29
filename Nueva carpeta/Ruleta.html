@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruleta de Recompensas</title>
+    <link rel="stylesheet" href="Ruleta.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>RULETA SUPER GALLITO</h1>
+            <div class="status-bar">
+            </div>
+        </div>
+
+        <div class="wheel-container">
+            <div class="wheel-wrapper">
+                <canvas id="wheelCanvas" width="400" height="400"></canvas>
+                <div class="wheel" id="wheel">
+                    <div class="sector sector-1" data-prize="FREE 50">
+                        <span>GRATIS<br> 50</span>
+                    </div>
+                    <div class="sector sector-2" data-prize="BONUS X2">
+                        <span>BONUS<br> X2</span>
+                    </div>
+                    <div class="sector sector-3" data-prize="PERDISTE">
+                        <span>PERDISTE<br></span>
+                    </div>
+                    <div class="sector sector-4" data-prize="20 GALLITOS">
+                        <span>20 <br>GALLITOS</span>
+                    </div>
+                    <div class="sector sector-5" data-prize="DOBLE GALLITOS">
+                        <span>10 <br>GALLITOS</span>
+                    </div>
+                    <div class="sector sector-6" data-prize="PERDISTE">
+                        <span>PERDISTE<br></span>
+                    </div>
+                    <div class="sector sector-7" data-prize="50 GALLITOS">
+                        <span>50 <br>GALLITOS</span>
+                    </div>
+                    <div class="sector sector-8" data-prize="100 GALLITOS">
+                        <span>100 <br>GALLITOS</span>
+                    </div>
+                </div>
+                <div class="wheel-pointer">
+                    <div class="pointer"></div>
+                </div>
+                <div class="wheel-center">
+                    <div class="center-circle">
+                        <span class="center-icon">🐓</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="spin-button-container">
+            <button id="spinButton" class="spin-button">
+                ¡GIRAR!
+            </button>
+        </div>
+
+        <div class="result-modal" id="resultModal">
+            <div class="modal-content">
+                <h2>¡Felicidades!</h2>
+                <p>Has ganado:</p>
+                <div class="prize-display" id="prizeDisplay"></div>
+                <button id="claimButton" class="claim-button">Reclamar Premio</button>
+                <button id="closeModal" class="close-button">Cerrar</button>
+            </div>
+        </div>
+
+        <div class="bottom-nav">
+            <div class="nav-item">
+                <span class="nav-icon">🏠</span>
+                <span class="nav-text">HOME</span>
+            </div>
+            <div class="nav-item">
+                <span class="nav-icon">🛍️</span>
+                <span class="nav-text">STORE</span>
+            </div>
+            <div class="nav-item">
+                <span class="nav-icon">🎁</span>
+                <span class="nav-text">OFERTAS</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="Ruleta.js"></script>
+</body>
+</html>
